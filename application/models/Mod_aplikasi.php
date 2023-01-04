@@ -36,12 +36,32 @@ class Mod_aplikasi extends CI_Model
         $this->db->where('id', $id);
         return $this->db->get();
     }
-    public function tot_anggota()
+    public function totindustri()
+    {
+        $query = $this->db->query(
+            "
+        select count(id_industri) as total_ind 
+        from tempat_industri 
+        "
+        );
+        return $query;
+    }
+    public function totuser()
+    {
+        $query = $this->db->query(
+            "
+        select count(id_user) as total_user 
+        from tbl_user 
+        "
+        );
+        return $query;
+    }
+    public function totkategori()
     {
         $query = $this->db->query("
-        select count(nik) as total_ang 
-        from tbl_user 
-        where id_level = '3'
+        select count(id_kasur) as total_kasur 
+        from kategori_kasur 
+    
         ");
         return $query;
     }

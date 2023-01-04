@@ -15,6 +15,12 @@
                                   <i class="fa fa-plus"></i>
                                   Add
                               </a>
+                              <a href="<?= base_url('admin/cetak_industri') ?>" class="btn btn-primary btn-round ml-auto">
+                                  <span class="btn-label">
+                                      <i class="fa fa-print"></i>
+                                  </span>
+                                  Cetak
+                              </a>
                           </div>
                       </div>
 

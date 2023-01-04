@@ -19,7 +19,10 @@ class Dashboard extends MY_Controller
     {
         $nis = $this->db->get_where('tbl_user', ['id_user' => $this->session->userdata('id_user')])->row_array();
         $data['detail'] = $nis;
-       
+        $data['tot_tempat'] = $this->Mod_aplikasi->totindustri()->result_array();
+        $data['tot_user'] = $this->Mod_aplikasi->totuser()->result_array();
+        $data['tot_ktg'] = $this->Mod_aplikasi->totkategori()->result_array();
+        // dead($data['tot_tempat']);
         // dead($data['anggota']);
         $logged_in = $this->session->userdata('logged_in');
         if ($logged_in != TRUE || empty($logged_in)) {
