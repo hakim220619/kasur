@@ -9,7 +9,9 @@
               <div class="col-md-12">
                   <div class="card">
                       <div class="card-header">
+
                           <div class="d-flex align-items-center">
+                              <H1>Laporan</H1>
                               <a href="<?= base_url('admin/cetak_industri') ?>" class="btn btn-primary btn-round ml-auto">
                                   <span class="btn-label">
                                       <i class="fa fa-print"></i>
