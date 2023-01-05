@@ -117,6 +117,12 @@
                              </ul>
                          </div>
                      </li>
+                     <li class="nav-item">
+                         <a href="<?= base_url('admin/cetak') ?>" class="collapsed" aria-expanded="false">
+                             <i class="fas fa-print"></i>
+                             <p>Cetak</p>
+                         </a>
+                     </li>
                  <?php } ?>
                  <?php if ($_SESSION["id_level"] == ("4")) { ?>
                      <li class="nav-item">

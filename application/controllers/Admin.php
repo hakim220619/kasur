@@ -594,6 +594,15 @@ class Admin extends MY_Controller
         echo json_encode($data);
     }
 
+    public function cetak()
+    {
+        $data['ket'] = 'Tempat Industri';
+
+        $data['tempat_industri'] = $this->db->get('tempat_industri')->result();
+
+        $this->template->load('layoutbackend', 'admin/cetak', $data);
+    }
+
     public function cetak_industri()
     {
         $data['ket'] = 'Tempat Industri';
