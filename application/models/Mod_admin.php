@@ -71,4 +71,22 @@ class Mod_admin extends CI_Model
         ");
         return $query->result_array();
     }
+
+    public function search($keyword = 0)
+    {
+        if ($keyword === null) {
+            return $this->db->get('tempat_industri')->result_array();
+        } else {
+            $this->db->select('*');
+            $this->db->from('tempat_industri');
+            if ($keyword) {
+                $this->db->or_like('nama_industri', $keyword);
+            }
+            if ($keyword) {
+                $this->db->or_like('id_industri', $keyword);
+            }
+            $this->db->get();
+            // return $this->db->get_where('mahasiswa', ['id' => $id])->result_array();
+        }
+    }
 }
